@@ -1,107 +1,42 @@
-EZCART – E-Commerce Web Application
-Project Objective
+# EZCART – E-Commerce Web Application
 
-To design and develop a modern e-commerce web application that demonstrates frontend architecture, database integration, and cart functionality using Next.js and Supabase, with a focus on incremental feature development.
+## Project Objective
+To design and develop a modern e-commerce web application that demonstrates frontend architecture, database integration, and cart functionality using Next.js and Supabase, with a focus on incremental and scalable feature development.
 
-Technologies Used
+## Technologies Used
+- Next.js (App Router), React
+- Supabase – PostgreSQL Database & Authentication
+- HTML, CSS, JavaScript
+- Git & GitHub – Version Control and Documentation
 
-Next.js (App Router)
+## Architecture Overview
+This project follows a component-based web application architecture.  
+The frontend is built using Next.js, while Supabase is used as the backend for authentication, product storage, and cart data persistence.
 
-React
+Currently, only the **Shoes product page** is fully integrated with the database. Other sections are UI-ready and will be connected incrementally.
 
-Supabase (PostgreSQL & Authentication)
+## Implementation Details
+1. Built the frontend using Next.js App Router and reusable components.
+2. Created product and cart tables in Supabase PostgreSQL.
+3. Implemented authentication using Supabase email and password login.
+4. Integrated the Shoes page with Supabase to fetch products dynamically.
+5. Implemented a database-backed cart system with quantity control and persistence.
+6. Displayed cart item count in the header for real-time feedback.
+7. Served product images using the Next.js public directory.
 
-HTML, CSS, JavaScript
+## Current Scope
+- Only the **Shoes page** is dynamically connected to the database.
+- Cart functionality works based on products added from the Shoes page.
+- Authentication currently uses a **default username and password** for testing.
+- Other product categories are static and will be enhanced in future updates.
 
-Git & GitHub – Version Control
+## Future Enhancements
+- Extend database integration to all product categories.
+- Implement user-specific carts.
+- Add checkout and order management.
+- Introduce product detail pages.
+- Admin dashboard for product management.
 
-Architecture Overview
-
-This project follows a component-based web application architecture.
-
-The frontend is built using Next.js App Router.
-
-Product data and cart data are stored in Supabase PostgreSQL.
-
-Authentication is handled using Supabase Auth.
-
-State management for the cart is implemented using React Context API.
-
-Images are served from the Next.js public directory.
-
-Current Implementation Scope
-
-To keep development structured and scalable, features are being implemented page by page.
-
-✅ Implemented
-
-Shoes Product Page
-
-Products are fetched dynamically from the Supabase database.
-
-Each product includes name, price, and image.
-
-Add to Cart functionality is fully database-backed.
-
-Cart Page
-
-Displays products added from the Shoes page.
-
-Shows product images, quantity, and total price.
-
-Supports quantity decrement and item removal.
-
-Cart data persists across refreshes.
-
-Authentication
-
-Login and Signup pages implemented using Supabase Auth.
-
-Currently supports a default username and password for testing.
-
-UI & Navigation
-
-Cart count badge in header.
-
-Clean navigation between Home, Products, Cart, and Account pages.
-
-⚠️ Partially Implemented / Static
-
-Other product categories are currently UI-only.
-
-Only the Shoes page is connected to the database.
-
-Checkout and order placement are not implemented yet.
-
-Development Approach
-
-This project is being developed using an incremental enhancement approach:
-
-Start with one product category (Shoes).
-
-Ensure database integration and cart logic are stable.
-
-Gradually extend the same logic to other categories.
-
-Scale authentication and cart to support multiple users in later stages.
-
-This approach allows better control over complexity and easier debugging.
-
-Future Enhancements
-
-Extend database integration to all product categories.
-
-Implement user-specific carts.
-
-Add checkout and order management.
-
-Introduce product detail pages.
-
-Admin dashboard for product management.
-
-Payment gateway integration.
-
-Author
-
-Luckshvadhan B
-Information Technology Engineering Student
+## Author
+**Luckshvadhan B**  
+Information Technology Student
