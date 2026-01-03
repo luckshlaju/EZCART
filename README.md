@@ -1,36 +1,107 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+EZCART – E-Commerce Web Application
+Project Objective
 
-## Getting Started
+To design and develop a modern e-commerce web application that demonstrates frontend architecture, database integration, and cart functionality using Next.js and Supabase, with a focus on incremental feature development.
 
-First, run the development server:
+Technologies Used
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Next.js (App Router)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+React
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Supabase (PostgreSQL & Authentication)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+HTML, CSS, JavaScript
 
-## Learn More
+Git & GitHub – Version Control
 
-To learn more about Next.js, take a look at the following resources:
+Architecture Overview
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project follows a component-based web application architecture.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The frontend is built using Next.js App Router.
 
-## Deploy on Vercel
+Product data and cart data are stored in Supabase PostgreSQL.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Authentication is handled using Supabase Auth.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+State management for the cart is implemented using React Context API.
+
+Images are served from the Next.js public directory.
+
+Current Implementation Scope
+
+To keep development structured and scalable, features are being implemented page by page.
+
+✅ Implemented
+
+Shoes Product Page
+
+Products are fetched dynamically from the Supabase database.
+
+Each product includes name, price, and image.
+
+Add to Cart functionality is fully database-backed.
+
+Cart Page
+
+Displays products added from the Shoes page.
+
+Shows product images, quantity, and total price.
+
+Supports quantity decrement and item removal.
+
+Cart data persists across refreshes.
+
+Authentication
+
+Login and Signup pages implemented using Supabase Auth.
+
+Currently supports a default username and password for testing.
+
+UI & Navigation
+
+Cart count badge in header.
+
+Clean navigation between Home, Products, Cart, and Account pages.
+
+⚠️ Partially Implemented / Static
+
+Other product categories are currently UI-only.
+
+Only the Shoes page is connected to the database.
+
+Checkout and order placement are not implemented yet.
+
+Development Approach
+
+This project is being developed using an incremental enhancement approach:
+
+Start with one product category (Shoes).
+
+Ensure database integration and cart logic are stable.
+
+Gradually extend the same logic to other categories.
+
+Scale authentication and cart to support multiple users in later stages.
+
+This approach allows better control over complexity and easier debugging.
+
+Future Enhancements
+
+Extend database integration to all product categories.
+
+Implement user-specific carts.
+
+Add checkout and order management.
+
+Introduce product detail pages.
+
+Admin dashboard for product management.
+
+Payment gateway integration.
+
+Author
+
+Luckshvadhan B
+Information Technology Engineering Student
