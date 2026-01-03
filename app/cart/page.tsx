@@ -13,8 +13,8 @@ export default function CartPage() {
 
   return (
     <div style={{ padding: "40px", color: "#ffffff" }}>
-      
-      {/* TOP NAV BAR */}
+
+
       <div
         style={{
           display: "flex",
@@ -23,16 +23,16 @@ export default function CartPage() {
           marginBottom: "30px",
         }}
       >
-        {/* LEFT */}
+
         <h2 style={{ color: "#7c7cff" }}>Your Cart</h2>
 
-        {/* RIGHT */}
+
         <Link href="/" style={{ color: "#00f5ff", textDecoration: "none" }}>
           Home →
         </Link>
       </div>
 
-      {/* CART CONTENT */}
+
       {cart.length === 0 ? (
         <div
           style={{
@@ -60,7 +60,7 @@ export default function CartPage() {
                 gap: "16px",
               }}
             >
-              {/* PRODUCT IMAGE */}
+
               <img
                 src={item.image}
                 alt={item.name}
@@ -73,7 +73,7 @@ export default function CartPage() {
                 }}
               />
 
-              {/* PRODUCT INFO */}
+
               <div style={{ flex: 1 }}>
                 <h4 style={{ marginBottom: "6px" }}>
                   {item.name}
@@ -82,7 +82,7 @@ export default function CartPage() {
                 <p>Quantity: {item.quantity}</p>
               </div>
 
-              {/* ACTIONS */}
+
               <div style={{ display: "flex", gap: "10px" }}>
                 {item.quantity > 1 && (
                   <button
@@ -117,7 +117,7 @@ export default function CartPage() {
             </div>
           ))}
 
-          {/* TOTAL */}
+
           <h3 style={{ marginTop: "20px" }}>
             Total: ₹{total}
           </h3>

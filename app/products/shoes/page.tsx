@@ -17,7 +17,7 @@ export default function ShoesPage() {
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
 
-  // UI feedback state
+
   const [addedId, setAddedId] = useState<string | null>(null);
 
   useEffect(() => {
@@ -35,13 +35,13 @@ export default function ShoesPage() {
   }, []);
 
   const handleAdd = async (product: Product) => {
-    // INSTANT FEEDBACK
+
     setAddedId(product.id);
 
-    // DB action
+
     await addToCart(product);
 
-    // Reset button after delay
+
     setTimeout(() => {
       setAddedId(null);
     }, 1200);
@@ -57,7 +57,7 @@ export default function ShoesPage() {
 
   return (
     <div style={{ padding: "40px" }}>
-      {/* TOP NAV */}
+
       <div
         style={{
           display: "flex",

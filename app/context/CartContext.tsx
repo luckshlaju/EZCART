@@ -4,7 +4,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 import { supabase } from "@/lib/supabaseClient";
 
 type CartItem = {
-  id: string; // cart_items.id
+  id: string;
   product_id: string;
   name: string;
   price: number;
@@ -31,7 +31,7 @@ const CartContext = createContext<CartContextType | null>(null);
 export function CartProvider({ children }: { children: React.ReactNode }) {
   const [cart, setCart] = useState<CartItem[]>([]);
 
-  // Fetch cart from DB and flatten joined product
+
   const fetchCart = async () => {
     const { data } = await supabase
       .from("cart_items")
@@ -62,7 +62,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   const addToCart = async (product: any) => {
-  // Always re-check from DB, not state
+
   const { data: existing } = await supabase
     .from("cart_items")
     .select("id, quantity")
@@ -81,7 +81,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     });
   }
 
-  // 🔑 ALWAYS refetch
+
   fetchCart();
 };
 

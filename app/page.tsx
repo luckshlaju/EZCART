@@ -13,7 +13,6 @@ export default function HomePage() {
 
   return (
     <>
-      {/* HEADER */}
       <header className="header">
         <div>
           <img src="/logo.png" alt="LOGO" className="logo" />
@@ -27,7 +26,6 @@ export default function HomePage() {
           <Link href="/">Home</Link>
           <Link href="#">Products</Link>
 
-          {/* CART WITH BADGE */}
           <Link href="/cart" style={{ position: "relative" }}>
             Cart
             {cartCount > 0 && (
@@ -52,7 +50,6 @@ export default function HomePage() {
         </nav>
       </header>
 
-      {/* CATEGORIES */}
       <section className="categories">
         <div className="category">Electronics</div>
         <div className="category">Fashion</div>
@@ -61,7 +58,6 @@ export default function HomePage() {
         <div className="category">Housewares</div>
       </section>
 
-      {/* SLIDER */}
       <section className="slider">
         <div className="slides">
           <img src="/shoes.jpg" className="slide" />
@@ -81,7 +77,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CHRISTMAS SPECIALS */}
       <section className="deal-section">
         <h2>Christmas Specials</h2>
 
@@ -100,7 +95,6 @@ export default function HomePage() {
             <p>Pants</p>
           </div>
 
-          {/* SHOES CARD → PRODUCTS/SHOES */}
           <Link
             href="/products/shoes"
             style={{ textDecoration: "none", color: "inherit" }}
@@ -122,7 +116,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* NEW YEAR DEALS */}
+
       <section className="deal-section">
         <h2>New Year Deals</h2>
 
@@ -157,7 +151,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* FOOTER */}
+
       <footer className="footer">
         <div className="footer-bottom">
           <p>© 2025 EZCART. All rights reserved.</p>
